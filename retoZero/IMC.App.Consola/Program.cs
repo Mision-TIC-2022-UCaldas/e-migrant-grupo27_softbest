@@ -8,9 +8,9 @@ namespace IMC.App.Consola
         {
             float Peso;
             double Cuadrado, Altura, Resultado;
-            Console.WriteLine("Ingrese su Peso");
+            Console.WriteLine("Ingrese su Peso: ");
             Peso = float.Parse(Console.ReadLine());
-            Console.WriteLine("Ingrese su altura");
+            Console.WriteLine("Ingrese su altura: ");
             Altura = double.Parse(Console.ReadLine());
             Cuadrado = (Math.Pow(Altura,2));
 
