@@ -1,0 +1,22 @@
+﻿@page
+@model TorneoFutbol.App.Frontend.Pages.Novedades.DetailsModel
+@{
+}
+<h1>Detalles de las Novedades</h1>
+<table class="table table-striped">
+        <tr>
+            <th scope="col">Fecha_Novedad</th>
+            <td>@Model.novedad.Fecha_Novedad</td>
+        </tr>
+        <tr>
+            <th scope="col">Dias_Activo</th>
+            <td>@Model.novedad.Dias_Activo</td>
+        </tr>
+        <tr>
+            <th scope="col">Descripcion</th>
+            <td>@Model.novedad.Descripcion</td>
+        </tr>             
+                   
+</table>
+
+<a class="btn btn-secondary" asp-page="./Index">Volver</a>

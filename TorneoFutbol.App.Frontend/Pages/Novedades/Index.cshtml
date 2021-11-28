@@ -1,0 +1,44 @@
+﻿@page
+@model TorneoFutbol.App.Frontend.Pages.Novedades.IndexModel
+@{
+}
+<form method="get">
+<div class="form-inline">
+    <label class="sr-only" for="g">Filtro</label>
+    <input type="text" name="g" id="g" asp-for="@Model.gActual"  class="form-control mb-2 mr-sm-2"
+         placeholder="Filtrar por Nombre" />
+         
+        <button type="submit" class="btn btn-primary mr-sm-2 mb-2">Filtrar</button>          
+
+</div>
+    
+</form>
+<h1>Listado de Novedades</h1>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Fecha Novedad</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var novedad in Model.novedad)
+        {
+            <tr>
+                <td>@novedad.Fecha_Novedad</td>
+                <td>@novedad.Descripcion</td>
+                <td>
+                    <a class="btn btn-secondary" asp-page="./Details" asp-route-id="@novedad.Id">Detalle</a>
+                    <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@novedad.Id">Editar</a>
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+    
+</table>
+<a class="btn btn-primary" asp-page="./Create">Crear Novedad</a>
+

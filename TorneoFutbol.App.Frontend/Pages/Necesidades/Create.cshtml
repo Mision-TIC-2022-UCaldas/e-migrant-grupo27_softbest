@@ -1,0 +1,26 @@
+﻿@page
+@using TorneoFutbol.App.Dominio
+@model TorneoFutbol.App.Frontend.Pages.Necesidades.CreateModel
+@{
+}
+<h1>Nueva Necesidad</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="necesidad.Nombre_Nesesidad"></label>
+        <input asp-for="necesidad.Nombre_Nesesidad" class="form-control" placeholder="Ingrese el Nombre de la Necesidad">
+        <span class="text-danger" asp-validation-for="necesidad.Nombre_Nesesidad"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="necesidad.Descripcion"></label>
+        <input asp-for="necesidad.Descripcion" class="form-control" placeholder="Ingrese la Descripcion de la Necesidad">
+        <span class="text-danger" asp-validation-for="necesidad.Descripcion"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="necesidad.Prioridad"></label>
+        <select asp-for="necesidad.Prioridad" asp-items="Html.GetEnumSelectList<Prioridad>()"class="form-control"></select>
+    </div>
+    
+    
+    <button type="submit" class="btn btn-primary btn-block">Crear Necesidad</button> 
+</form>
+<br><br><a class="btn btn-secondary" asp-page="./Index">Volver</a>

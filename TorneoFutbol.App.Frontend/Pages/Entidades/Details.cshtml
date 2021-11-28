@@ -1,0 +1,47 @@
+﻿@page
+@model TorneoFutbol.App.Frontend.Pages.Entidades.DetailsModel
+@{
+}
+<h1>Detalle de las Entidades</h1>
+<table class="table table-striped">
+        <tr>
+            <th scope="col">Razon_Social</th>
+            <td>@Model.entidad.Razon_Social</td>
+        </tr>
+        <tr>
+            <th scope="col">Nit</th>
+            <td>@Model.entidad.Nit</td>
+        </tr>    
+        <tr>
+            <th scope="col">Direccion</th>
+            <td>@Model.entidad.Direccion</td>
+        </tr>    
+        <tr>
+            <th scope="col">Teléfono</th>
+            <td>@Model.entidad.Teléfono</td>
+        </tr> 
+        <tr>
+            <th scope="col">Ciudad</th>
+            <td>@Model.entidad.Ciudad</td>
+        </tr> 
+        <tr>
+            <th scope="col">Sector</th>
+            <td>@Model.entidad.Sector</td>
+        </tr> 
+        <tr>
+            <th scope="col">Tipo_Servicio</th>
+            <td>@Model.entidad.Tipo_Servicio</td>
+        </tr> 
+        <tr>
+            <th scope="col">Direccion_Electronica</th>
+            <td>@Model.entidad.Direccion_Electronica</td>
+        </tr> 
+        <tr>
+            <th scope="col">Pagina_Web</th>
+            <td>@Model.entidad.Pagina_Web</td>
+        </tr> 
+         
+        
+</table>
+
+<a class="btn btn-secondary" asp-page="./Index">Volver</a>

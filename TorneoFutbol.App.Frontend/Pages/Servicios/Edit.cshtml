@@ -1,0 +1,39 @@
+﻿@page
+@using TorneoFutbol.App.Dominio
+@model TorneoFutbol.App.Frontend.Pages.Servicios.EditModel
+@{
+}
+<h1>Actualizar Servicio</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="servicio.Id"></label>
+        <input asp-for="servicio.Id" class="form-control" readonly>
+    </div> 
+    <div class="form-group">
+        <label asp-for="servicio.Nombre"></label>
+        <input asp-for="servicio.Nombre" class="form-control" placeholder="Ingrese el Nombre del Servicio">
+        <span class="text-danger" asp-validation-for="servicio.Nombre"></span>
+    </div>  
+    <div class="form-group">
+        <label asp-for="servicio.Numero_Migrantes"></label>
+        <input asp-for="servicio.Numero_Migrantes" class="form-control" placeholder="Ingrese la Direccion del Servicio">
+        <span class="text-danger" asp-validation-for="servicio.Numero_Migrantes"></span>
+    </div>  
+    <div class="form-group">
+        <label asp-for="servicio.Fecha_Inico_Servicio"></label>
+        <input asp-for="servicio.Fecha_Inico_Servicio" class="form-control" placeholder="Ingrese la Direccion del Estadio">
+        <span class="text-danger" asp-validation-for="servicio.Fecha_Inico_Servicio"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="servicio.Fecha_Fin_Servicio"></label>
+        <input asp-for="servicio.Fecha_Fin_Servicio" class="form-control" placeholder="Ingrese la Direccion del Estadio">
+        <span class="text-danger" asp-validation-for="servicio.Fecha_Fin_Servicio"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="servicio.Estado_Servicio"></label>
+        <input asp-for="servicio.Estado_Servicio" class="form-control" placeholder="Ingrese la Direccion del Estadio">
+        <span class="text-danger" asp-validation-for="servicio.Estado_Servicio"></span>
+    </div> 
+    <button type="submit" class="btn btn-primary btn-block">Actualizar Servicio</button> 
+</form>
+<br><br><a class="btn btn-secondary" asp-page="./Index">Volver</a>

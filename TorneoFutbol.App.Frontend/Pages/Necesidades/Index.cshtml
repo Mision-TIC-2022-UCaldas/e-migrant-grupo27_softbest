@@ -1,0 +1,44 @@
+﻿@page
+@using TorneoFutbol.App.Dominio
+@model TorneoFutbol.App.Frontend.Pages.Necesidades.IndexModel
+@{
+}
+<form method="get">
+<div class="form-inline">
+    <label class="sr-only" for="g">Filtro</label>
+    <input type="text" name="g" id="g" asp-for="@Model.gActual"  class="form-control mb-2 mr-sm-2"
+         placeholder="Filtrar por Nombre" />
+         
+        <button type="submit" class="btn btn-primary mr-sm-2 mb-2">Filtrar</button>          
+
+</div>
+    
+</form>
+<h1>Listado de Necesidades</h1>
+
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre Necesidad</th>
+            <th scope="col">Prioridad</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var necesidad in Model.necesidad)
+        {
+            <tr>
+                <td>@necesidad.Nombre_Nesesidad</td>
+                <td>@necesidad.Prioridad</td>
+                <td>
+                    <a class="btn btn-secondary" asp-page="./Details" asp-route-id="@necesidad.Id">Detalle</a>
+                    <a class="btn btn-primary" asp-page="./Edit" asp-route-id="@necesidad.Id">Editar</a>
+                </td>
+            </tr>
+        }
+        
+    </tbody>
+    
+</table>
+<a class="btn btn-primary" asp-page="./Create">Crear Necesidad</a>

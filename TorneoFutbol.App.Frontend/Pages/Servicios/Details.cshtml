@@ -1,0 +1,30 @@
+﻿@page
+@model TorneoFutbol.App.Frontend.Pages.Servicios.DetailsModel
+@{
+}
+<h1>Detalle de los Servicios</h1>
+<table class="table table-striped">
+        <tr>
+            <th scope="col">Nombre</th>
+            <td>@Model.servicio.Nombre</td>
+        </tr>
+        <tr>
+            <th scope="col">Numero_Migrantes</th>
+            <td>@Model.servicio.Numero_Migrantes</td>
+        </tr>
+        <tr>
+            <th scope="col">Fecha_Inico_Servicio</th>
+            <td>@Model.servicio.Fecha_Inico_Servicio</td>
+        </tr>
+        <tr>
+            <th scope="col">Fecha_Fin_Servicio</th>
+            <td>@Model.servicio.Fecha_Fin_Servicio</td>
+        </tr>
+        <tr>
+            <th scope="col">Estado_Servicio</th>
+            <td>@Model.servicio.Estado_Servicio</td>
+        </tr>
+        
+</table>
+
+<a class="btn btn-secondary" asp-page="./Index">Volver</a>

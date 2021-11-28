@@ -1,0 +1,26 @@
+﻿@page
+@using TorneoFutbol.App.Dominio
+@model TorneoFutbol.App.Frontend.Pages.Grupos.EditModel
+@{
+}
+<h1>Actualizar Grupo</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="grupo.Id"></label>
+        <input asp-for="grupo.Id" class="form-control" readonly>
+    </div> 
+    <div class="form-group">
+        <label asp-for="grupo.Nombre_Grupo"></label>
+        <input asp-for="grupo.Nombre_Grupo" class="form-control" placeholder="Ingrese el Nombre del Grupo">
+        <span class="text-danger" asp-validation-for="grupo.Nombre_Grupo"></span>
+    </div>  
+    <div class="form-group">
+        <label asp-for="grupo.Parentesco"></label>
+        <input asp-for="grupo.Parentesco" class="form-control" placeholder="Ingrese el Parentesco ">
+        <span class="text-danger" asp-validation-for="grupo.Parentesco"></span>
+    </div> 
+    
+    
+    <button type="submit" class="btn btn-primary btn-block">Actualizar Grupo</button> 
+</form>
+<br><br><a class="btn btn-secondary" asp-page="./Index">Volver</a>

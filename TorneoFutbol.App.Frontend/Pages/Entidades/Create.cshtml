@@ -1,0 +1,53 @@
+﻿@page
+@using TorneoFutbol.App.Dominio
+@model TorneoFutbol.App.Frontend.Pages.Entidades.CreateModel
+@{
+}
+<h1>Nueva Entidad</h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="entidad.Razon_Social"></label>
+        <input asp-for="entidad.Razon_Social" class="form-control" placeholder="Ingrese la Razon Social de la Entidad">
+        <span class="text-danger" asp-validation-for="entidad.Razon_Social"></span>
+    </div>  
+    <div class="form-group">
+        <label asp-for="entidad.Nit"></label>
+        <input asp-for="entidad.Nit" class="form-control" placeholder="Ingrese el Nit de la Entidad">
+        <span class="text-danger" asp-validation-for="entidad.Nit"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="entidad.Direccion"></label>
+        <input asp-for="entidad.Direccion" class="form-control" placeholder="Ingrese la Direccion de la Entidad">
+        <span class="text-danger" asp-validation-for="entidad.Direccion"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="entidad.Teléfono"></label>
+        <input asp-for="entidad.Teléfono" class="form-control" placeholder="Ingrese el Teléfono de la entidad">
+        <span class="text-danger" asp-validation-for="entidad.Teléfono"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="entidad.Ciudad"></label>
+        <input asp-for="entidad.Ciudad" class="form-control" placeholder="Ingrese la Ciudad de la entidad">
+        <span class="text-danger" asp-validation-for="entidad.Ciudad"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="entidad.Sector"></label>
+        <select asp-for="entidad.Sector" asp-items="Html.GetEnumSelectList<Sector>()"class="form-control"></select>
+    </div> 
+    <div class="form-group">
+        <label asp-for="entidad.Tipo_Servicio"></label>
+        <select asp-for="entidad.Tipo_Servicio" asp-items="Html.GetEnumSelectList<Tipo_Servicio>()"class="form-control"></select>
+    </div> 
+    <div class="form-group">
+        <label asp-for="entidad.Direccion_Electronica"></label>
+        <input asp-for="entidad.Direccion_Electronica" class="form-control" placeholder="Ingrese la Direccion Electronica de la entidad">
+        <span class="text-danger" asp-validation-for="entidad.Direccion_Electronica"></span>
+    </div> 
+    <div class="form-group">
+        <label asp-for="entidad.Pagina_Web"></label>
+        <input asp-for="entidad.Pagina_Web" class="form-control" placeholder="Ingrese la Pagina Web de la entidad">
+        <span class="text-danger" asp-validation-for="entidad.Pagina_Web"></span>
+    </div> 
+    <button type="submit" class="btn btn-primary btn-block">Crear Entidad</button> 
+</form>
+<br><br><a class="btn btn-secondary" asp-page="./Index">Volver</a>

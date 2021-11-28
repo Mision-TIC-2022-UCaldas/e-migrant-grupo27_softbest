@@ -1,0 +1,56 @@
+﻿@page
+@model TorneoFutbol.App.Frontend.Pages.Necesidades.DetailsModel
+@{
+}
+
+<h1>Detalles de las Necesidades</h1>
+<table class="table table-striped">
+        <tr>
+            <th scope="col">Nombre_Nesesidad</th>
+            <td>@Model.necesidad.Nombre_Nesesidad</td>
+        </tr>
+        <tr>
+            <th scope="col">Descripcion</th>
+            <td>@Model.necesidad.Descripcion</td>
+        </tr>
+        <tr>
+            <th scope="col">Prioridad</th>
+            <td>@Model.necesidad.Prioridad</td>
+        </tr>    
+        <tr>
+            <th scope="col">Migrante</th>
+            @if (Model.necesidad.Migrante == null)
+            {
+                <th>
+                    <a class="btn btn-secondary" asp-page="./AddMigrantes" asp-route-id="@Model.necesidad.Id">
+                        AsignarMigrante
+                    </a>
+                </th>
+            }
+            else
+            {
+                <td>@Model.necesidad.Migrante.Nombre</td>
+            }
+            
+        </tr>
+        <tr>
+            <th scope="col">Entidad</th>
+            @if (Model.necesidad.Entidad == null)
+            {
+                <th>
+                    <a class="btn btn-secondary" asp-page="./AddEntidades" asp-route-id="@Model.necesidad.Id">
+                        AsignarEntidad
+                    </a>
+                </th>
+            }
+            else
+            {
+                <td>@Model.necesidad.Entidad.Nit</td>
+            }
+            
+        </tr>
+            
+                   
+</table>
+
+<a class="btn btn-secondary" asp-page="./Index">Volver</a>

@@ -1,0 +1,23 @@
+﻿@page
+@model TorneoFutbol.App.Frontend.Pages.Necesidades.AddMigrantesModel
+@{
+}
+<h1>Asignar Migrante</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="IdNecesidad">Necesidad</label>
+        <input type= "text" id = "IdNecesidad" name="IdNecesidad" class="form-control" value="@Model.necesidad.Id" readonly>
+    </div> 
+    <div class="form-group">
+        <label for="IdMigrante">Migrante</label>
+        <select name="IdMigrante" id="IdMigrante" name = "IdMigrante" class="form-control">
+            @foreach (var migrante in Model.migrantes)
+            {
+                <option value = "@migrante.Id">@migrante.Nombre</option>
+            }
+
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Asignar Migrante</button>
+</form>
+<br><br><a class="btn btn-secondary" asp-page="./Index">Volver</a>

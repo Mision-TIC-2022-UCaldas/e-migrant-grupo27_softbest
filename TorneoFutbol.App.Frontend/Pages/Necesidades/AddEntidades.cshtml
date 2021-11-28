@@ -1,0 +1,23 @@
+﻿@page
+@model TorneoFutbol.App.Frontend.Pages.Necesidades.AddEntidadesModel
+@{
+}
+<h1>Asignar Entidad</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="IdNecesidad">Necesidad</label>
+        <input type= "text" id = "IdNecesidad" name="IdNecesidad" class="form-control" value="@Model.necesidad.Id" readonly>
+    </div> 
+    <div class="form-group">
+        <label for="IdEntidad">Migrante</label>
+        <select name="IdEntidad" id="IdEntidad" name = "IdEntidad" class="form-control">
+            @foreach (var entidad in Model.entidades)
+            {
+                <option value = "@entidad.Id">@entidad.Nit</option>
+            }
+
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Asignar Entidad</button>
+</form>
+<br><br><a class="btn btn-secondary" asp-page="./Index">Volver</a>
